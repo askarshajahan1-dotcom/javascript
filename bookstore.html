@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Book store</title>
+</head>
+<body>
+	<div style="width: 400px; margin: auto; box-sizing: border-box; box-shadow: 0px 12px 8px rgba(0, 0, 0, 0.2),0px 12px 8px rgba(0, 0, 0, 0.1); height: 300px;">
+		<p id = "p1" style="padding-top: 150px;"></p>
+	</div>
+	
+</body>
+<script>
+		let Book={
+			title: "The Alchemist",
+            author: "Paulo Coelho",
+            year: 1988,
+            getsummary: function(){
+            	 return "The book"+this.title +"<br>"+"was written by"+"<br>"+this.author+"in"+this.year
+            }
+		}
+		function printBookSummary(bookobj){
+			let summary = bookobj.getsummary();
+			return summary;
+
+		}
+		let output = printBookSummary(Book);
+		document.getElementById("p1").innerHTML=output;
+		
+	</script>
+</html>
